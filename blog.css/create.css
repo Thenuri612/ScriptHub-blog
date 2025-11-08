@@ -1,0 +1,149 @@
+/* ====== Create Post Page Styles for ScriptHub ====== */
+
+/* Body background and font */
+body.create-page {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffe5b4; /* same as home page */
+    margin: 0;
+    min-height: 100vh;
+    color: #111;
+    position: relative; /* needed for watermark layering */
+}
+
+/* Faint watermark behind content */
+body.create-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('watermark.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.07;       /* faint watermark */
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #5c3a00;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+}
+
+header nav {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+header nav a {
+    color: #fff;
+    background: #f4a261;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+header nav a:hover {
+    background: #e76f51;
+}
+
+/* Form container */
+.form-wrap {
+    background: #fff3e0; /* lighter orange like blog cards */
+    max-width: 700px;
+    width: 90%;
+    margin: 20px auto 40px auto; /* space below header */
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    position: relative; /* above watermark */
+    z-index: 1;
+}
+
+/* Form heading */
+.form-wrap h1 {
+    font-size: 2rem;
+    color: #5c3a00;
+    margin-bottom: 25px;
+}
+
+/* Form labels */
+.form-wrap label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+    color: #5c3a00; /* match theme */
+}
+
+/* Text input and textarea */
+.form-wrap input,
+.form-wrap textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+/* Textarea height */
+.form-wrap textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Submit button */
+.form-wrap button {
+    width: 100%;
+    padding: 14px;
+    background: #f4a261; /* same as home page buttons */
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.form-wrap button:hover {
+    background: #e76f51;
+}
+
+/* Error messages */
+.alert {
+    color: red;
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media(max-width: 720px) {
+    .form-wrap {
+        padding: 20px 20px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
+

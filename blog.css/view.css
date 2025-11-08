@@ -1,0 +1,156 @@
+/* ====== View Page Styles for ScriptHub ====== */
+
+/* Body and background */
+body.view-page {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffe5b4; /* light orange */
+    margin: 0;
+    padding: 0;
+    color: #111;
+    position: relative; /* needed for watermark layering */
+}
+
+/* Faint watermark behind content */
+body.view-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('watermark.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.07;       /* faint watermark */
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Header (no box around title) */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    padding: 20px 0;
+    margin: 50px auto 20px auto;
+    max-width: none;
+    text-align: center;
+    position: relative; /* above watermark */
+    z-index: 1;
+}
+
+/* Header title */
+header h1 {
+    margin: 0 0 15px 0;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #5c3a00;
+    letter-spacing: 2px;
+}
+
+/* User greeting styling */
+header .user-greeting {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #5c3a00; /* dark brown */
+    text-align: center;
+}
+
+/* Navigation links styling */
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+header nav a {
+    color: #111;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 8px;
+    background: #f4a261; /* home page button color */
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+header nav a:hover {
+    background: #e76f51;
+    color: #fff;
+}
+
+/* Main content wrapper */
+.wrap {
+    background: #fff3e0; /* lighter orange */
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    position: relative; /* above watermark */
+    z-index: 1;
+}
+
+/* Post title */
+.wrap h2 {
+    margin-top: 0;
+    color: #111;
+    font-size: 2rem;
+}
+
+/* Author and date */
+.wrap small {
+    display: block;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Post content */
+.wrap .content {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #111;
+    margin-bottom: 30px;
+}
+
+/* Buttons (Edit/Delete) */
+.wrap .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background: #f4a261;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.wrap .btn:hover {
+    background: #e76f51;
+}
+
+@media(max-width: 720px) {
+    .wrap {
+        padding: 20px 20px;
+        margin: 20px;
+    }
+
+    header {
+        padding: 20px 20px;
+        margin: 30px 20px 20px 20px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,146 @@
+
+body.login-page {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffe5b4; /* same as home page */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Faint watermark behind content */
+body.login-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('watermark.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.07;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Centered login box */
+.login-box {
+    background: #fff1d6;
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 360px;
+    z-index: 1;
+}
+
+/* Title styling */
+.login-box h1 {
+    color: #5c3a00;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Navigation links (Register / Home) */
+.login-box nav {
+    margin-bottom: 25px;
+}
+
+.login-box nav a {
+    background: #f4a261;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 8px;
+    transition: background 0.2s;
+}
+
+.login-box nav a:hover {
+    background: #e76f51;
+}
+
+/* Form container */
+.form-wrap {
+    text-align: left;
+}
+
+/* Labels */
+.form-wrap label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #5c3a00;
+}
+
+/* Inputs */
+.form-wrap input[type="text"],
+.form-wrap input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* Remember me row BELOW password, aligned left */
+.remember-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    gap: 8px;
+}
+
+.remember-row input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.remember-row label {
+    font-size: 0.95rem;
+    color: #5c3a00;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Submit button */
+.form-wrap button {
+    width: 100%;
+    padding: 12px;
+    background: #f4a261;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.form-wrap button:hover {
+    background: #e76f51;
+}
+
+/* Error messages */
+.alert {
+    color: red;
+    margin-bottom: 15px;
+}
+
+/* Responsive for mobile */
+@media(max-width: 420px) {
+    .login-box {
+        width: 90%;
+        padding: 30px 20px;
+    }
+}
+
+
+
