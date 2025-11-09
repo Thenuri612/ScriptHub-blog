@@ -1,7 +1,6 @@
-
 body.login-page {
     font-family: Arial, Helvetica, sans-serif;
-    background: #ffe5b4; /* same as home page */
+    background: #ffe5b4; 
     margin: 0;
     display: flex;
     justify-content: center;
@@ -10,7 +9,6 @@ body.login-page {
     position: relative;
 }
 
-/* Faint watermark behind content */
 body.login-page::before {
     content: "";
     position: fixed;
@@ -25,7 +23,6 @@ body.login-page::before {
     z-index: -1;
 }
 
-/* Centered login box */
 .login-box {
     background: #fff1d6;
     padding: 40px 60px;
@@ -36,14 +33,12 @@ body.login-page::before {
     z-index: 1;
 }
 
-/* Title styling */
 .login-box h1 {
     color: #5c3a00;
     margin-bottom: 20px;
     font-size: 2rem;
 }
 
-/* Navigation links (Register / Home) */
 .login-box nav {
     margin-bottom: 25px;
 }
@@ -63,12 +58,10 @@ body.login-page::before {
     background: #e76f51;
 }
 
-/* Form container */
 .form-wrap {
     text-align: left;
 }
 
-/* Labels */
 .form-wrap label {
     display: block;
     margin-bottom: 5px;
@@ -76,7 +69,6 @@ body.login-page::before {
     color: #5c3a00;
 }
 
-/* Inputs */
 .form-wrap input[type="text"],
 .form-wrap input[type="password"] {
     width: 100%;
@@ -88,7 +80,6 @@ body.login-page::before {
     font-size: 1rem;
 }
 
-/* Remember me row BELOW password, aligned left */
 .remember-row {
     display: flex;
     align-items: center;
@@ -110,7 +101,6 @@ body.login-page::before {
     cursor: pointer;
 }
 
-/* Submit button */
 .form-wrap button {
     width: 100%;
     padding: 12px;
@@ -128,13 +118,11 @@ body.login-page::before {
     background: #e76f51;
 }
 
-/* Error messages */
 .alert {
     color: red;
     margin-bottom: 15px;
 }
 
-/* Responsive for mobile */
 @media(max-width: 420px) {
     .login-box {
         width: 90%;

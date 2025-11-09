@@ -6,7 +6,7 @@ requireLogin();
 $id = $_GET['id'] ?? null;
 
 if ($id) {
-    $stmt = $mysqli->prepare("DELETE FROM blogPost WHERE id=? AND user_id=?");
+    $stmt = $mysqli->prepare("DELETE FROM blogpost WHERE id=? AND user_id=?");
     $stmt->bind_param('ii', $id, $_SESSION['user_id']);
     $stmt->execute();
 }

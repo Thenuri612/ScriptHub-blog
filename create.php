@@ -1,7 +1,7 @@
 <?php
 require_once 'db.php';
 require_once 'auth.php';
-requireLogin(); // Ensure user is logged in
+requireLogin(); 
 
 $errors = [];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($title === '' || $content === '') {
         $errors[] = 'Title and content are required.';
     } else {
-        $stmt = $mysqli->prepare("INSERT INTO blogPost (user_id, title, content) VALUES (?, ?, ?)");
+        $stmt = $mysqli->prepare("INSERT INTO blogpost (user_id, title, content) VALUES (?, ?, ?)");
         $stmt->bind_param('iss', $_SESSION['user_id'], $title, $content);
         if ($stmt->execute()) {
             header('Location: index.php');
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="utf-8">
   <title>Create New Post - ScriptHub</title>
-  <link rel="stylesheet" href="blog.css/create.css">
+  <link rel="stylesheet" href="create.css">
 </head>
 <body class="create-page">
 

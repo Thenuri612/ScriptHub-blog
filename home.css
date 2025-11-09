@@ -1,13 +1,10 @@
-/* ====== Home Page Styles for ScriptHub ====== */
-
-/* Body for homepage (add class="home-page" to <body>) */
 body.home-page {
     font-family: Arial, Helvetica, sans-serif;
-    background: #ffe5b4; /* light orange */
+    background: #ffe5b4; 
     margin: 0;
     padding: 0;
     color: #111;
-    position: relative; /* needed for pseudo-element */
+    position: relative; 
 }
 
 body.home-page::before {
@@ -24,7 +21,6 @@ body.home-page::before {
     z-index: -1;             
 }
 
-/* Center container for all content */
 .container {
     max-width: 900px;
     margin: 20px auto 40px auto; 
@@ -32,7 +28,6 @@ body.home-page::before {
     text-align: center;
 }
 
-/* Header (centered, no box) */
 header {
     display: flex;
     flex-direction: column;
@@ -46,7 +41,6 @@ header {
     max-width: none;
 }
 
-/* Blog name styling */
 header h1 {
     margin: 0 0 10px 0;
     font-size: 4rem;
@@ -55,14 +49,12 @@ header h1 {
     color: #5c3a00;
 }
 
-/* Greeting row */
 header nav .user-greeting {
     font-weight: 600;
     font-size: 1.1rem;
     margin-bottom: 10px;
 }
 
-/* Actions row */
 header nav .actions {
     display: flex;
     justify-content: center;
@@ -83,7 +75,6 @@ header nav .actions a:hover {
     background: #e76f51;
 }
 
-/* Grid layout for blog posts */
 .posts {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -98,7 +89,6 @@ header nav .actions a:hover {
     }
 }
 
-/* Each blog card */
 .card {
     border-radius: 14px;
     padding: 20px;
@@ -106,7 +96,6 @@ header nav .actions a:hover {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Style variations for odd/even cards */
 .card:nth-child(odd) {
     background: #fff3e0;
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
@@ -122,19 +111,16 @@ header nav .actions a:hover {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* Blog title */
 .card h2 {
     margin: 0 0 10px 0;
     font-size: 1.5rem;
     color: #5c3a00;
 }
 
-/* Author and date */
 .card small {
     color: #666;
 }
 
-/* Edit/Delete buttons */
 .card .btn {
     display: inline-block;
     padding: 8px 16px;
@@ -154,7 +140,6 @@ header nav .actions a:hover {
     background: #e76f51;
 }
 
-/* Footer */
 footer {
     text-align: center;
     color: #6b7280;

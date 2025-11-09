@@ -1,10 +1,12 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/auth.php';
 
-// Fetch blog posts
 $sql = "SELECT b.id, b.title, b.created_at, b.user_id, u.username
-        FROM blogPost b 
+        FROM blogpost b 
         JOIN `user` u ON b.user_id = u.id
         ORDER BY b.created_at DESC";
 $res = $mysqli->query($sql);
@@ -16,7 +18,7 @@ $posts = $res->fetch_all(MYSQLI_ASSOC);
     <meta charset="utf-8">
     <title>ScriptHub</title>
     
-    <link rel="stylesheet" href="blog.css/home.css">
+    <link rel="stylesheet" href="home.css">
 </head>
 
 <body class="home-page">

@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             loginUser($row['id'], $row['username']);
 
             if (!empty($_POST['remember_me'])) {
-                set_remember_cookie($row['id'], $row['username'], 30); // 30 days
+                set_remember_cookie($row['id'], $row['username'], 30); 
             }
 
             header('Location: index.php');
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="utf-8">
     <title>Login - ScriptHub</title>
-    <link rel="stylesheet" href="blog.css/login.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body class="login-page">
     <div class="login-box">

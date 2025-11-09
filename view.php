@@ -5,7 +5,7 @@ require_once __DIR__ . '/auth.php';
 $id = $_GET['id'] ?? null;
 if (!$id) { header('Location: index.php'); exit; }
 
-$stmt = $mysqli->prepare("SELECT b.*, u.username FROM blogPost b JOIN `user` u ON b.user_id = u.id WHERE b.id = ?");
+$stmt = $mysqli->prepare("SELECT b.*, u.username FROM blogpost b JOIN `user` u ON b.user_id = u.id WHERE b.id = ?");
 $stmt->bind_param('i', $id);
 $stmt->execute();
 $post = $stmt->get_result()->fetch_assoc();
@@ -16,7 +16,7 @@ if (!$post) { header('Location: index.php'); exit; }
 <head>
   <meta charset="utf-8">
   <title><?= htmlspecialchars($post['title']) ?> - ScriptHub</title>
-  <link rel="stylesheet" href="blog.css/view.css">
+  <link rel="stylesheet" href="view.css">
 </head>
 <body class="view-page">
 

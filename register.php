@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="utf-8">
     <title>Register - ScriptHub</title>
-    <link rel="stylesheet" href="blog.css/register.css">
+    <link rel="stylesheet" href="register.css">
 </head>
 <body class="register-page">
 

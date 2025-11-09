@@ -1,15 +1,11 @@
-
-/* Body */
 body.blog-page {
     font-family: Arial, Helvetica, sans-serif;
-    background: #ffe5b4; /* same light orange as home */
+    background: #ffe5b4; 
     margin: 0;
     padding: 0;
     color: #111;
     position: relative;
 }
-
-
 
 body.blog-page::before {
     content: "";
@@ -25,8 +21,6 @@ body.blog-page::before {
     z-index: -1;
 }
 
-
-/* Header */
 header {
     display: flex;
     flex-direction: column;
@@ -50,7 +44,7 @@ header nav {
 }
 
 header nav .user-greeting {
-    margin-bottom: 8px; /* space between greeting and links */
+    margin-bottom: 8px; 
 }
 
 header nav .nav-links a {
@@ -64,17 +58,15 @@ header nav .nav-links a:hover {
     color: #e76f51;
 }
 
-/* Form wrapper */
 .form-wrap {
     max-width: 700px;
     margin: 10px auto;
     padding: 30px 25px;
-    background: #fff3e0; /* matches home page card */
+    background: #fff3e0; 
     border-radius: 14px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-/* Alerts */
 .alert {
     background: #f8d7da;
     color: #721c24;
@@ -83,20 +75,17 @@ header nav .nav-links a:hover {
     margin-bottom: 20px;
 }
 
-/* Form styling */
 form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-/* Labels */
 form label {
     font-weight: 600;
     color: #5c3a00;
 }
 
-/* Inputs and Textarea */
 form input[type="text"],
 form textarea {
     padding: 12px;
@@ -114,13 +103,11 @@ form textarea:focus {
     outline: none;
 }
 
-/* Textarea height */
 form textarea {
     min-height: 150px;
     resize: vertical;
 }
 
-/* Buttons */
 form button {
     background: #f4a261;
     color: #fff;
@@ -136,7 +123,6 @@ form button:hover {
     background: #e76f51;
 }
 
-/* Responsive */
 @media(max-width: 720px) {
     .form-wrap {
         margin: 20px auto;
